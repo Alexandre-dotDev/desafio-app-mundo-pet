@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>App - Mundo Pet</title>
+  <script defer src="main.js"></script></head>
+  <body>
+    <main class="container">
+      <div class="logo">
+        <img
+          src="./assets/icons/Dog-Duotone-Logo.svg"
+          width="200"
+          alt="Cachorro"
+        />
+        <p>Mundo Pet</p>
+      </div>
+      <section class="your-schedule">
+        <header>
+          <div class="hero">
+            <h1>Sua agenda</h1>
+            <p>
+              Aqui você pode ver todos os clientes e serviços agendados para
+              hoje.
+            </p>
+          </div>
+          <input type="datetime-local" />
+        </header>
+        <div class="appointments">
+          <div class="schedules">
+            <header>
+              <div class="period">
+                <img src="./assets/icons/Sun-Fog.svg" alt="Logo do sol" />
+                <p>Manhã</p>
+              </div>
+            </header>
+            <div class="schedule">
+              <div class="book">
+                <p class="time">09:00</p>
+                <div class="owner">
+                  <span class="name-pet">Thor</span> /
+                  <span class="name">Fernando Cadência</span>
+                </div>
+                <p class="service">Vacinação</p>
+                <a href="#">Remover agendamento</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <button>Novo Agendamento</button>
+    </main>
+  </body>
+</html>
