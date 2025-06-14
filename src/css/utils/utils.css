@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.disabled {
+  display: none;
+}
+
+.center {
+  justify-content: center;
+  align-items: center;
+}
+
+.center-row-inline {
+  justify-content: center;
+}
+
+.center-col-inline {
+  align-items: center;
+}
+
+.center-col-inline {
+  align-items: center;
+}
+
+.center-col-block {
+  justify-content: center;
+}
+
+.collumn {
+  flex-direction: column;
+}

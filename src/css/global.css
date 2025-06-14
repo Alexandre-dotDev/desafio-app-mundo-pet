@@ -12,11 +12,13 @@
   --content-secondary: #98959d;
   --content-tertiary: #666666;
   --content-brand: #9282fa;
+  --color-title: #f5f4f5;
 
   /* Background */
   --bg-primary: #151515;
   --bg-secondary: #1e1e1e;
   --bg-tertiary: #23242c;
+  --bg-mobile: #2e2c30;
   --bg-brand: #9282fa;
   --bg-highlights: #bdb4fa;
 
@@ -35,10 +37,12 @@
   --accent-orange-light: #75501b;
 
   /* TIPOGRAPH */
+  --ff-Grotesk: "Familjen Grotesk", sans-serif;
   --ff-inter: "Inter", sans-serif;
   --ff-inter-tight: "Inter Tight", sans-serif;
   /* Inter Tight */
   --title: 600 1.5rem/2rem var(--ff-inter-tight);
+  --logo: 600 1rem/1.5rem var(--ff-Grotesk);
   /* Inter */
   --p-md: 400 0.875rem/1.5rem var(--ff-inter);
   --p-sm: 400 0.75/1rem var(--ff-inter);

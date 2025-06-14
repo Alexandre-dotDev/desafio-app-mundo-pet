@@ -1,0 +1,16 @@
+@import "./utils/utils.css";
+@import "./components/module-components.css";
+
+.container {
+  position: relative;
+  max-width: 23.4375rem;
+  min-height: 100vh;
+
+  border: solid green;
+}
+
+@media (min-width: 80rem) {
+  .container {
+    min-width: 80rem;
+  }
+}

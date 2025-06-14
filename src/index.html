@@ -3,36 +3,36 @@
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+
     <title>App - Mundo Pet</title>
   </head>
   <body>
-    <main class="container">
-      <div class="logo">
-        <img
-          src="./assets/icons/Dog-Duotone-Logo.svg"
-          width="200"
-          alt="Cachorro"
-        />
+    <main class="container flex collumn center-col-inline">
+      <div class="logo flex center">
+        <img src="./assets/icons/Dog-Duotone-Logo.svg" alt="Cachorro" />
         <p>Mundo Pet</p>
       </div>
       <!-- Wrapeer central -->
-      <section class="your-schedule">
+      <section class="your-schedule flex collumn">
         <!-- Cabeçalho central -->
-        <header>
-          <div class="hero">
+        <header class="header-hero flex collumn">
+          <div class="hero flex collumn">
             <h1>Sua agenda</h1>
             <p>
               Aqui você pode ver todos os clientes e serviços agendados para
               hoje.
             </p>
           </div>
-          <input type="datetime-local" />
+          <div class="input-wrapper">
+            <input type="date" />
+          </div>
         </header>
         <!-- Wrapper de agenda -->
         <div class="appointments">
@@ -65,7 +65,7 @@
             <!-- Cabeçalho do período -->
             <header>
               <div class="period">
-                <img src="./assets/icons/Sun-Fog.svg" alt="Logo do sol" />
+                <img src="./assets/icons/Cloud-Sun.svg" alt="Logo do sol" />
                 <p>Tarde</p>
               </div>
             </header>
@@ -89,7 +89,7 @@
             <!-- Cabeçalho do período -->
             <header>
               <div class="period">
-                <img src="./assets/icons/Sun-Fog.svg" alt="Logo do sol" />
+                <img src="./assets/icons/Moon-Stars.svg" alt="Logo do sol" />
                 <p>Noite</p>
               </div>
             </header>

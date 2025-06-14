@@ -1,0 +1,15 @@
+.your-schedule {
+  width: inherit;
+  min-height: 100vh;
+  margin-top: 3.5625rem;
+  margin-inline: 1.25rem;
+
+  border: solid yellow;
+}
+
+@media (min-width: 80rem) {
+  .your-schedule {
+    min-width: 54.4375rem;
+    padding-inline: 5rem;
+  }
+}
