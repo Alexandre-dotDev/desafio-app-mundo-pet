@@ -20,7 +20,7 @@
         <p>Mundo Pet</p>
       </div>
       <!-- Wrapeer central -->
-      <section class="your-schedule flex collumn">
+      <section class="your-schedule flex collumn blur-overlay">
         <!-- Cabeçalho central -->
         <header class="header-hero flex collumn">
           <div class="hero flex collumn">
@@ -31,7 +31,7 @@
             </p>
           </div>
           <div class="input-wrapper">
-            <input type="date" />
+            <input type="date" id="data" />
           </div>
         </header>
         <!-- Wrapper de agenda -->
@@ -183,11 +183,7 @@
         </div>
       </section>
 
-      <div class="button flex center">
-        <button>Novo Agendamento</button>
-      </div>
-
-      <section class="new-schedule">
+      <section class="new-schedule enabled">
         <form>
           <div class="close">
             <img src="./assets/icons/Close-Small-Fill.svg" alt="Fechar" />
@@ -196,27 +192,64 @@
           <p>Preencha os dados do cliente para realizar o agendamento:</p>
 
           <fieldset>
-            <label for="name-tutor">Nome do tutor</label>
-            <input type="text" name="name-tutor" id="name-tutor" />
-            <label for="pet-name">Nome do pet</label>
-            <input type="text" name="pet-name" id="pet-name" />
-            <label for="phone">Telefone</label>
-            <input type="tel" name="phone" id="phone" />
-            <label for="description">Descrição de serviço</label>
-            <textarea
-              name="description"
-              id="description"
-              placeholder="Banho e tosa"
-            ></textarea>
-            <label for="date">Data</label>
-            <input type="date" name="date" id="date" />
-            <label for="hour">Hora</label>
-            <input type="time" name="hour" id="hour" />
+            <div class="tutor">
+              <label for="name-tutor">Nome do tutor</label>
+              <input
+                type="text"
+                name="name-tutor"
+                id="name-tutor"
+                placeholder="Seu nome"
+                required
+              />
+            </div>
+            <div class="pet">
+              <label for="pet-name">Nome do pet</label>
+              <input
+                type="text"
+                name="pet-name"
+                id="pet-name"
+                placeholder="Nome do pet"
+                required
+              />
+            </div>
+            <div class="phone">
+              <label for="phone">Telefone</label>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="(00) 0 0000-0000"
+                required
+              />
+            </div>
+            <div class="textarea">
+              <label for="description">Descrição de serviço</label>
+              <textarea
+                name="description"
+                id="description"
+                placeholder="Banho e tosa"
+                required
+              ></textarea>
+            </div>
+            <div class="date-time flex collumn">
+              <div class="date">
+                <label for="date">Data</label>
+                <input type="date" name="date" id="date" required />
+              </div>
+              <div class="hour">
+                <label for="hour">Hora</label>
+                <input type="time" name="hour" id="hour" required />
+              </div>
+            </div>
 
             <button>Agendar</button>
           </fieldset>
         </form>
       </section>
+
+      <div class="button flex center">
+        <button>Novo Agendamento</button>
+      </div>
     </main>
   </body>
 </html>

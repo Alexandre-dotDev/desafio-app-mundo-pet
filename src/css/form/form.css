@@ -1,10 +1,10 @@
 form {
   position: relative;
-  width: 100%;
-  padding-inline: 1.25rem;
-  background: var(--bg-tertiary);
+  width: 21.875rem;
+  padding-inline: 2.5rem;
 
   border-radius: 0.75rem;
+  background: var(--bg-tertiary);
 
   & .close {
     position: absolute;
@@ -30,5 +30,173 @@ form {
     color: var(--content-secondary);
     margin-top: 0.25rem;
     margin-bottom: 1.75rem;
+  }
+
+  & fieldset {
+    width: 100%;
+
+    & .tutor {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        background-image: url("../../assets/icons/User.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        pointer-events: none;
+      }
+    }
+
+    & .pet {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        background-image: url("../../assets/icons/Pet-Paw.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        pointer-events: none;
+      }
+    }
+
+    & .phone {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        left: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+
+        background-image: url("../../assets/icons/Phone.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        pointer-events: none;
+      }
+    }
+
+    & .textarea textarea {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    & .date-time {
+      & .date {
+        position: relative;
+
+        & input[type="date"]::-webkit-calendar-picker-indicator {
+          position: absolute;
+          right: 0.75rem;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 55%;
+          left: 0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          background-image: url("../../assets/icons/Calendar.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          pointer-events: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 55%;
+          right: 0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          background-image: url("../../assets/icons/check.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          pointer-events: none;
+        }
+      }
+
+      & .hour {
+        position: relative;
+
+        & input[type="time"]::-webkit-calendar-picker-indicator {
+          position: absolute;
+          right: 0.75rem;
+          opacity: 0;
+          cursor: pointer;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 55%;
+          left: 0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          background-image: url("../../assets/icons/Clock-Circle--Streamline-Solar.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          pointer-events: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 55%;
+          right: 0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          background-image: url("../../assets/icons/check.svg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  form {
+    width: 29.8125rem;
+
+    & fieldset {
+      & .date-time {
+        box-sizing: border-box;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.9594rem;
+
+        & .date {
+          width: 11.9063rem;
+        }
+
+        & .hour {
+          width: 11.9063rem;
+        }
+      }
+    }
   }
 }

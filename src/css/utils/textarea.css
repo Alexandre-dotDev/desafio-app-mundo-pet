@@ -1,8 +1,9 @@
 textarea {
-  max-width: 100%;
   min-height: 5.1875rem;
   padding: 0.75rem;
+  margin-top: 0.25rem;
   font: var(--text-lg);
+
   white-space: pre-wrap; /* Mantém quebras de linha e permite quebra automática */
   word-break: break-word; /* Quebra palavras muito longas */
   overflow-wrap: break-word; /* Alternativa para compatibilidade */

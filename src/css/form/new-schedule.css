@@ -1,8 +1,12 @@
 .new-schedule {
   position: absolute;
-  width: 100%;
-  padding-inline: 1.25rem;
+  justify-content: center;
   margin-top: 4.75rem;
+  border-radius: 0.75rem;
+}
 
-  border: solid green;
+@media (min-width: 80rem) {
+  .new-schedule {
+    min-width: 29.8125rem;
+  }
 }
