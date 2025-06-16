@@ -1,0 +1,7 @@
+.schedules {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.625rem;
+  background: var(--bg-tertiary);
+}
