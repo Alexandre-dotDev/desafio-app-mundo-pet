@@ -1,0 +1,13 @@
+button {
+  width: 7.6875rem;
+  height: 3rem;
+  margin-top: 0.75rem;
+  margin-bottom: 2.5rem;
+  align-self: flex-end;
+
+  font: var(--label-lg);
+  text-transform: uppercase;
+
+  border-radius: 0.5rem;
+  background-color: var(--bg-brand);
+}
