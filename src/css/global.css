@@ -13,13 +13,16 @@
   --content-tertiary: #666666;
   --content-brand: #9282fa;
   --color-title: #f5f4f5;
+  --color-text-btn: #050505;
 
   /* Background */
   --bg-primary: #151515;
   --bg-secondary: #1e1e1e;
   --bg-tertiary: #23242c;
   --bg-mobile: #2e2c30;
+  --bg-mobile-alpha: rgba(46, 44, 48, 0.25);
   --bg-brand: #9282fa;
+  --bg-brand-alpha: rgba(146, 130, 250, 0.333);
   --bg-highlights: #bdb4fa;
 
   /* Border */
@@ -27,6 +30,7 @@
   --border-secondary: #86818c;
   --border-brand: #9282fa;
   --border-divisor: #353339;
+  --border-bottom: #2e2c30;
 
   /* Accent */
   --accent-blue: #027df0;
@@ -47,12 +51,28 @@
   --p-md: 400 0.875rem/1.5rem var(--ff-inter);
   --p-sm: 400 0.75/1rem var(--ff-inter);
   --label-lg: 600 1rem/1.5rem var(--ff-inter);
+  --text-lg: 400 1rem/1.5rem var(--ff-inter);
   --label-md: 600 0.875rem/1.5rem var(--ff-inter);
   --label-sm: 600 0.75rem/1rem var(--ff-inter);
   --link: 400 0.75rem/1rem var(--ff-inter);
 }
 
+html,
 body {
   background-color: var(--bg-secondary);
   color: var(--content-primary);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  font: var(--link);
+  color: var(--content-tertiary);
+}
+
+fieldset,
+input,
+textarea {
+  all: unset;
+  appearance: none;
 }

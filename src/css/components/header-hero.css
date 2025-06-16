@@ -1,6 +1,6 @@
 .header-hero {
   margin-top: 0.75rem;
-  border: solid green;
+
   & .hero {
     gap: 0.25rem;
 

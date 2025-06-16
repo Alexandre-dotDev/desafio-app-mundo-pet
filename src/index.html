@@ -13,7 +13,7 @@
 
     <title>App - Mundo Pet</title>
   </head>
-  <body>
+  <body class="flex center-row-inline">
     <main class="container flex collumn center-col-inline">
       <div class="logo flex center">
         <img src="./assets/icons/Dog-Duotone-Logo.svg" alt="Cachorro" />
@@ -35,27 +35,58 @@
           </div>
         </header>
         <!-- Wrapper de agenda -->
-        <div class="appointments">
+        <div class="appointments flex collumn">
           <!-- Bloco de Período Manhã-->
           <div class="schedules">
             <!-- Cabeçalho do período -->
-            <header>
+            <header class="header-schedules">
               <div class="period">
                 <img src="./assets/icons/Sun-Fog.svg" alt="Logo do sol" />
                 <p>Manhã</p>
               </div>
+              <p>09h-12h</p>
             </header>
             <!-- Agenda do dia -->
-            <div class="schedule">
+            <div class="schedule-hours">
               <!-- Agenda do horário -->
-              <div class="book">
-                <p class="time">09:00</p>
-                <div class="owner">
-                  <span class="name-pet">Thor</span> /
-                  <span class="name">Fernando Cadência</span>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">09:00</p>
+                    <div class="client">
+                      <span class="name-pet">Vira lata</span> /
+                      <span class="name">Vinícius</span>
+                    </div>
+                  </div>
+                  <p class="service">Vacinação na perna</p>
                 </div>
-                <p class="service">Vacinação</p>
-                <a href="#">Remover agendamento</a>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
+              </div>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">11:00</p>
+                    <div class="client">
+                      <span class="name-pet">Snoop</span> /
+                      <span class="name">Carol</span>
+                    </div>
+                  </div>
+                  <p class="service">Banho</p>
+                </div>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
+              </div>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">12:00</p>
+                    <div class="client">
+                      <span class="name-pet">Marley</span> /
+                      <span class="name">Esmeralda</span>
+                    </div>
+                  </div>
+                  <p class="service">Tosa</p>
+                </div>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
               </div>
             </div>
           </div>
@@ -63,23 +94,31 @@
           <!-- Bloco de Período Tarde-->
           <div class="schedules">
             <!-- Cabeçalho do período -->
-            <header>
+            <header class="header-schedules">
               <div class="period">
-                <img src="./assets/icons/Cloud-Sun.svg" alt="Logo do sol" />
+                <img
+                  src="./assets/icons/Cloud-Sun.svg"
+                  alt="Logo do sol com nuvens"
+                />
                 <p>Tarde</p>
               </div>
+              <p>13h-18h</p>
             </header>
             <!-- Agenda do dia -->
-            <div class="schedule">
+            <div class="schedule-hours">
               <!-- Agenda do horário -->
-              <div class="book">
-                <p class="time">09:00</p>
-                <div class="owner">
-                  <span class="name-pet">Thor</span> /
-                  <span class="name">Fernando Cadência</span>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">15:00</p>
+                    <div class="client">
+                      <span class="name-pet">Costelinha</span> /
+                      <span class="name">Miguel</span>
+                    </div>
+                  </div>
+                  <p class="service">Castração</p>
                 </div>
-                <p class="service">Vacinação</p>
-                <a href="#">Remover agendamento</a>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
               </div>
             </div>
           </div>
@@ -87,29 +126,97 @@
           <!-- Bloco de Período Noite-->
           <div class="schedules">
             <!-- Cabeçalho do período -->
-            <header>
+            <header class="header-schedules">
               <div class="period">
-                <img src="./assets/icons/Moon-Stars.svg" alt="Logo do sol" />
+                <img
+                  src="./assets/icons/Moon-Stars.svg"
+                  alt="Logo da lua com estrelas"
+                />
                 <p>Noite</p>
               </div>
+              <p>19h-21h</p>
             </header>
             <!-- Agenda do dia -->
-            <div class="schedule">
+            <div class="schedule-hours">
               <!-- Agenda do horário -->
-              <div class="book">
-                <p class="time">09:00</p>
-                <div class="owner">
-                  <span class="name-pet">Thor</span> /
-                  <span class="name">Fernando Cadência</span>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">20:00</p>
+                    <div class="client">
+                      <span class="name-pet">Caramelo</span> /
+                      <span class="name">Henrique</span>
+                    </div>
+                  </div>
+                  <p class="service">Banho</p>
                 </div>
-                <p class="service">Vacinação</p>
-                <a href="#">Remover agendamento</a>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
+              </div>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">21:00</p>
+                    <div class="client">
+                      <span class="name-pet">Bonner</span> /
+                      <span class="name">Osvaldo</span>
+                    </div>
+                  </div>
+                  <p class="service">Medicamento</p>
+                </div>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
+              </div>
+              <div class="wrapper-book">
+                <div class="book">
+                  <div class="owner">
+                    <p class="time">18:00</p>
+                    <div class="client">
+                      <span class="name-pet">Madruga</span> /
+                      <span class="name">Marcos</span>
+                    </div>
+                  </div>
+                  <p class="service">Tosa</p>
+                </div>
+                <a class="remove-schedule" href="#">Remover agendamento</a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <button>Novo Agendamento</button>
+
+      <div class="button flex center">
+        <button>Novo Agendamento</button>
+      </div>
+
+      <section class="new-schedule">
+        <form>
+          <div class="close">
+            <img src="./assets/icons/Close-Small-Fill.svg" alt="Fechar" />
+          </div>
+          <h2>Agende um atendimento</h2>
+          <p>Preencha os dados do cliente para realizar o agendamento:</p>
+
+          <fieldset>
+            <label for="name-tutor">Nome do tutor</label>
+            <input type="text" name="name-tutor" id="name-tutor" />
+            <label for="pet-name">Nome do pet</label>
+            <input type="text" name="pet-name" id="pet-name" />
+            <label for="phone">Telefone</label>
+            <input type="tel" name="phone" id="phone" />
+            <label for="description">Descrição de serviço</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Banho e tosa"
+            ></textarea>
+            <label for="date">Data</label>
+            <input type="date" name="date" id="date" />
+            <label for="hour">Hora</label>
+            <input type="time" name="hour" id="hour" />
+
+            <button>Agendar</button>
+          </fieldset>
+        </form>
+      </section>
     </main>
   </body>
 </html>
