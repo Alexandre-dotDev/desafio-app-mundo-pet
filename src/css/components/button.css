@@ -1,0 +1,39 @@
+.button {
+  margin-top: 2.75rem;
+  width: 100%;
+  height: 5.25rem;
+  padding-inline: 1.25rem;
+  padding-block: 1rem;
+  background: var(--bg-mobile-alpha);
+
+  & button {
+    all: unset;
+    width: 13.625rem;
+    height: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    font: var(--label-lg);
+    color: var(--color-text-btn);
+
+    border-radius: 0.5rem;
+    background-color: var(--bg-brand);
+    filter: drop-shadow(2px 2px 30px var(--bg-brand-alpha));
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 80rem) {
+  .button {
+    position: relative;
+    width: 100%;
+    margin-top: 0;
+    justify-content: flex-end;
+    background: none;
+
+    button {
+      position: absolute;
+      top: -1rem;
+      right: -4.25rem;
+    }
+  }
+}
