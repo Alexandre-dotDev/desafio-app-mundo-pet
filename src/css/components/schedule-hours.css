@@ -1,0 +1,87 @@
+.schedule-hours {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  width: 100%;
+
+  border: none;
+
+  & .wrapper-book + .wrapper-book {
+    border-top: 1px solid var(--border-bottom);
+  }
+
+  & .wrapper-book {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0.75rem;
+
+    & .remove-schedule {
+      align-self: flex-end;
+    }
+
+    & .book {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+
+      & .owner {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+
+        & .time {
+          width: max-content;
+          font: var(--label-md);
+          color: var(--content-primary);
+        }
+
+        & .client {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          width: max-content;
+
+          & .name-pet {
+            width: max-content;
+            font: var(--label-md);
+            color: var(--content-primary);
+          }
+
+          & .name {
+            width: max-content;
+            font: var(--p-md);
+            color: var(--content-secondary);
+          }
+        }
+      }
+
+      & .service {
+        width: 100%;
+        font: var(--p-md);
+        color: var(--content-secondary);
+      }
+    }
+  }
+}
+
+@media (min-width: 80rem) {
+  .schedule-hours {
+    & .wrapper-book {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      align-items: center;
+      width: 100%;
+
+      & .remove-schedule {
+        text-align: end;
+      }
+      & .book {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10rem;
+        width: 100%;
+      }
+    }
+  }
+}
