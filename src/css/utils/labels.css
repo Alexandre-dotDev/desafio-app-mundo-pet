@@ -1,0 +1,4 @@
+label {
+  font: var(--label-md);
+  color: var(--content-secondary);
+}
