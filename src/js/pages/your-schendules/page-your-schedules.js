@@ -2,10 +2,10 @@ import { createSchedules } from "./components/createSchedules";
 import { headerHero } from "./components/header-hero";
 
 export async function pageYourSchedule() {
-  const div = document.createElement("div");
-  div.classList.add("your-schedule", "flex", "column");
+  const section = document.createElement("section");
+  section.classList.add("your-schedule", "flex", "column");
 
-  div.append(headerHero(), await createSchedules());
+  section.append(headerHero(), await createSchedules());
 
-  return div;
+  return section;
 }

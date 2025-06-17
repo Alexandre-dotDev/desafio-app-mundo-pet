@@ -1,4 +1,4 @@
-import { createHeaderSchedule } from "../../../utils/create-header-schedule";
+import { createHeaderSchedule } from "./create-header-schedule";
 
 export async function headerSchedules(hour_1, hour_2, period) {
   // Criação direta com base no período passado

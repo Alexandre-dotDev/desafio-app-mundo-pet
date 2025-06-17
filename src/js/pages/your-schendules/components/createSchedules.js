@@ -15,20 +15,21 @@ export async function createSchedules() {
     return div;
   }
 
-  // Períodos em milissegundos
+  // Períodos em milissegundos, objeto com outros objetos.
   const periods = {
     morning: { label: "Manhã", start: 32400000, end: 46799000 },
     afternoon: { label: "Tarde", start: 46800000, end: 64799000 },
     night: { label: "Noite", start: 64800000, end: 75600000 },
   };
 
-  // Agrupar agendamentos por período
+  // Agrupar agendamentos por período, cria objeto com key e array de periodos.
   const periodGroups = {
     morning: [],
     afternoon: [],
     night: [],
   };
 
+  //Percorre os dados e verifica a qual perído pertence e faz um push() no período da condicional.
   for (const item of data) {
     const milliseconds = await getMillisecondsFromMidnight(item.time);
 
@@ -61,6 +62,7 @@ export async function createSchedules() {
     const div = document.createElement("div");
     div.classList.add("schedules");
 
+    //Passa por parametro os valores de inico, fim do período e o nome da label.
     const header = await headerSchedules(
       periods[key].start,
       periods[key].end,
