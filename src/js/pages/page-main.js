@@ -4,6 +4,7 @@ import { pageYourSchedule } from "./your-schendules/page-your-schedules";
 import { dateCurrent } from "./your-schendules/components/date-current";
 import { newSchedule } from "./your-schendules/components/new-schedule";
 import { pageNewSchedule } from "./new-schedule/page-new-schedule";
+import { closeWindowSchedule } from "./new-schedule/components/close-window-schedule";
 
 export async function pageMain() {
   const body = document.querySelector("body");
@@ -21,4 +22,5 @@ export async function pageMain() {
 
   dateCurrent();
   newSchedule();
+  closeWindowSchedule();
 }
