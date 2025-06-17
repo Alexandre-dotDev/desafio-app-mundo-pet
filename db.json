@@ -1,0 +1,32 @@
+{
+  "schedule": [
+    {
+      "id": "1",
+      "time": "09:00",
+      "name_pet": "Dogão",
+      "name_user": "Alexandre",
+      "serv": "Banho"
+    },
+    {
+      "id": "2",
+      "time": "12:00",
+      "name_pet": "Costelinha",
+      "name_user": "Miguel",
+      "serv": "Tosa"
+    },
+    {
+      "id": "3",
+      "time": "14:30",
+      "name_pet": "Caramelho",
+      "name_user": "Henrique",
+      "serv": "Vacina"
+    },
+    {
+      "id": "4",
+      "time": "19:30",
+      "name_pet": "Bonner",
+      "name_user": "Vinícius",
+      "serv": "Banho"
+    }
+  ]
+}
