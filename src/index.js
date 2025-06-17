@@ -1,7 +1,6 @@
 import "./index.css";
+import { pageMain } from "./js/pages/page-main";
 
-console.log("App carregado");
-
-// if (module.hot) {
-//   module.hot.accept();
-// }
+document.addEventListener("DOMContentLoaded", () => {
+  pageMain();
+});

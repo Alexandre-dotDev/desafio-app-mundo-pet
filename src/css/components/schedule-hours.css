@@ -3,6 +3,8 @@
   flex-direction: column;
   padding: 1.25rem;
   width: 100%;
+  font: var(--label-md);
+  color: var(--content-secondary);
 
   border: none;
 
