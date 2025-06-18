@@ -13,7 +13,8 @@
   "author": "Alexandre Silva",
   "license": "ISC",
   "dependencies": {
-    "dayjs": "^1.11.13"
+    "dayjs": "^1.11.13",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.27.4",

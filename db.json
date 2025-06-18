@@ -1,32 +1,40 @@
 {
   "schedule": [
     {
-      "id": "1",
-      "time": "09:00",
-      "name_pet": "Dogão",
-      "name_user": "Alexandre",
-      "serv": "Banho"
-    },
-    {
-      "id": "2",
-      "time": "12:00",
-      "name_pet": "Costelinha",
+      "id": "79a017ab-11db-491a-beb0-28765dfa558f",
       "name_user": "Miguel",
-      "serv": "Tosa"
+      "name_pet": "Polar",
+      "phone": "11 9 8741-4512",
+      "serv": "Tosa",
+      "date": "2025-06-19",
+      "time": "09:00"
     },
     {
-      "id": "3",
-      "time": "14:30",
-      "name_pet": "Caramelho",
-      "name_user": "Henrique",
-      "serv": "Vacina"
+      "id": "83cade22-e52e-4c37-88e7-df4e5488d072",
+      "name_user": "Henrrique",
+      "name_pet": "Sofia",
+      "phone": "11 9 4577-6645",
+      "serv": "Banho",
+      "date": "2025-06-20",
+      "time": "19:00"
     },
     {
-      "id": "4",
-      "time": "19:30",
-      "name_pet": "Bonner",
+      "id": "37c24c72-14a7-4882-aa4c-662a6215be00",
       "name_user": "Vinícius",
-      "serv": "Banho"
+      "name_pet": "Cagão Amarelo",
+      "phone": "11 9 7844-1200",
+      "serv": "Banho",
+      "date": "2025-06-21",
+      "time": "14:20"
+    },
+    {
+      "id": "b5b6169f-3018-4a8e-aecd-1c7ed9265b0e",
+      "name_user": "Carol",
+      "name_pet": "Nana",
+      "phone": "11 9 2345-1144",
+      "serv": "Vacina",
+      "date": "2025-06-22",
+      "time": "10:40"
     }
   ]
 }
