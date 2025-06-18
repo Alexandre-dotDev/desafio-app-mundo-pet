@@ -1,6 +1,6 @@
 import "./index.css";
-import { pageMain } from "./js/pages/page-main";
+import { app } from "./js/app";
 
-document.addEventListener("DOMContentLoaded", () => {
-  pageMain();
+document.addEventListener("DOMContentLoaded", async () => {
+  await app();
 });

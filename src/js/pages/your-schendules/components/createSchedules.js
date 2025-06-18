@@ -1,11 +1,11 @@
-import { getSchedules } from "../../../api/get-schedules";
+import { getAPI } from "../../../api/routes/get-api";
 import { getMillisecondsFromMidnight } from "../../../utils/get-milliseconds-from-midnight";
 import { headerSchedules } from "./header-schedules";
 import { scheduleHours } from "./schedule-hours";
 
 //Cria uma div que receberá suas tags internas separadas por peréodos(manhã, tarde e noite)
 export async function createSchedules() {
-  const data = await getSchedules();
+  const data = await getAPI();
 
   // Caso não haja agendamentos
   if (!data.length) {
@@ -70,7 +70,7 @@ export async function createSchedules() {
     );
 
     div.append(header, await scheduleHours(group));
-    appointments.appendChild(div);
+    appointments.append(div);
   }
 
   return appointments;

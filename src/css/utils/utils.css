@@ -44,3 +44,10 @@
   pointer-events: none; /* bloqueia cliques e seleção */
   user-select: none; /* bloqueia seleção de texto */
 }
+
+.block-click {
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}

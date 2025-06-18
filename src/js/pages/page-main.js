@@ -5,6 +5,8 @@ import { dateCurrent } from "./your-schendules/components/date-current";
 import { newSchedule } from "./your-schendules/components/new-schedule";
 import { pageNewSchedule } from "./new-schedule/page-new-schedule";
 import { closeWindowSchedule } from "./new-schedule/components/close-window-schedule";
+import { getAPI } from "../api/routes/get-api";
+import { loadNewSchedule } from "./new-schedule/components/load-new-schedule";
 
 export async function pageMain() {
   const body = document.querySelector("body");
@@ -23,4 +25,6 @@ export async function pageMain() {
   dateCurrent();
   newSchedule();
   closeWindowSchedule();
+  await getAPI();
+  await loadNewSchedule();
 }

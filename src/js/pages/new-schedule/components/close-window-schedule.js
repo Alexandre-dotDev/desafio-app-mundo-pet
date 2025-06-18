@@ -1,10 +1,12 @@
+import { getAPI } from "../../../api/routes/get-api";
+
 export function closeWindowSchedule() {
   const buttonClose = document.querySelector(".close img");
   const pageNewSchedule = document.querySelector(".new-schedule");
   const pageYourSchedule = document.querySelector(".your-schedule");
   const buttonSchedule = document.querySelector(".button");
 
-  buttonClose.addEventListener("click", () => {
+  buttonClose.addEventListener("click", async () => {
     pageNewSchedule.classList.remove("enabled");
     pageNewSchedule.classList.add("disabled");
     pageYourSchedule.classList.remove("disabled", "blur-overlay");
