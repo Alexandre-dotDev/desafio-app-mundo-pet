@@ -73,7 +73,7 @@
       display: grid;
       grid-template-columns: 3fr 1fr;
       align-items: center;
-      width: 100%;
+      width: 44.4375rem;
 
       & .remove-schedule {
         text-align: end;
@@ -81,7 +81,7 @@
       & .book {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 10rem;
+        /* gap: 10rem; */
         width: 100%;
       }
     }

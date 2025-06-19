@@ -6,3 +6,9 @@
   border-radius: 0.625rem;
   background: var(--bg-tertiary);
 }
+
+@media (min-width: 80rem) {
+  .schedules {
+    width: 100%;
+  }
+}
