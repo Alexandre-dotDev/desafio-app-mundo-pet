@@ -1,8 +1,10 @@
 import { baseAPI } from "../baseAPI";
 
-export async function getAPI() {
+export async function getAPI(standard) {
+  const normalize = standard ? `${baseAPI}?date=${standard}` : baseAPI;
+
   try {
-    const response = await fetch(baseAPI);
+    const response = await fetch(normalize);
 
     if (!response.ok) {
       let errorMessage = "Erro na requisição.";

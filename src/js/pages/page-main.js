@@ -7,6 +7,8 @@ import { pageNewSchedule } from "./new-schedule/page-new-schedule";
 import { closeWindowSchedule } from "./new-schedule/components/close-window-schedule";
 import { getAPI } from "../api/routes/get-api";
 import { loadNewSchedule } from "./new-schedule/components/load-new-schedule";
+import { filterByDate } from "../utils/filter-by-date";
+import { loadAppointments } from "./your-schendules/components/loadAppointments";
 
 export async function pageMain() {
   const body = document.querySelector("body");
@@ -25,6 +27,5 @@ export async function pageMain() {
   dateCurrent();
   newSchedule();
   closeWindowSchedule();
-  await getAPI();
   await loadNewSchedule();
 }

@@ -1,3 +1,4 @@
+import { filterByDate } from "../../utils/filter-by-date";
 import { createSchedules } from "./components/createSchedules";
 import { headerHero } from "./components/header-hero";
 
@@ -7,6 +8,11 @@ export async function pageYourSchedule() {
   section.id = "schedule-identifier";
 
   section.append(headerHero(), await createSchedules());
+
+  // Usa requestAnimationFrame para esperar renderização
+  requestAnimationFrame(() => {
+    filterByDate();
+  });
 
   return section;
 }
