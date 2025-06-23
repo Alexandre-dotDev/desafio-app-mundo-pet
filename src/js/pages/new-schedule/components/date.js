@@ -1,3 +1,5 @@
+import dayjs from "dayjs";
+
 export function date() {
   const div = document.createElement("div");
   div.classList.add("date");
@@ -11,6 +13,7 @@ export function date() {
   input.setAttribute("name", "date");
   input.setAttribute("id", "date");
   input.setAttribute("required", "");
+  input.value = dayjs().format("YYYY-MM-DD");
 
   div.append(label, input);
 

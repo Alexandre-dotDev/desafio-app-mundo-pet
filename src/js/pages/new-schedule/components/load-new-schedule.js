@@ -1,7 +1,7 @@
 import { postAPI } from "../../../api/routes/post-api";
 import { collectFormData } from "./collect-form-data";
 import { clearInputs } from "./clear-inputs";
-import { updateScheduleSection } from "../../your-schendules/components/update-schedule-section";
+import { updateAppointments } from "../../your-schendules/components/update-appointments";
 
 export async function loadNewSchedule() {
   const buttonToSchedule = document.querySelector("button");
@@ -20,7 +20,10 @@ export async function loadNewSchedule() {
       alert("Erro ao cadastrar: " + result.error);
       return;
     }
+
     clearInputs();
-    await updateScheduleSection();
+
+    const currentDate = document.querySelector("#data")?.value; // ← pega data atual do input
+    await updateAppointments(currentDate); // ← passa a data para garantir atualização correta
   });
 }

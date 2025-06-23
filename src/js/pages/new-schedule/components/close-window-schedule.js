@@ -1,5 +1,3 @@
-import { getAPI } from "../../../api/routes/get-api";
-
 export function closeWindowSchedule() {
   const buttonClose = document.querySelector(".close img");
   const pageNewSchedule = document.querySelector(".new-schedule");
