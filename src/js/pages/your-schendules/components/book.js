@@ -1,6 +1,7 @@
 export function book(obj) {
   const div = document.createElement("div");
   div.classList.add("book");
+  div.setAttribute("data-id", `${obj.id}`);
 
   const service = document.createElement("p");
   service.classList.add("service");

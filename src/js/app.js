@@ -6,6 +6,7 @@ import { openNewSchedule } from "./pages/your-schendules/components/open-new-sch
 import { closeWindowSchedule } from "./pages/new-schedule/components/close-window-schedule";
 import { loadNewSchedule } from "./pages/new-schedule/components/load-new-schedule";
 import { buttonScreenMain } from "./components/buttonScreenMain";
+import { deleteAPI } from "./api/routes/delete-api";
 
 export async function app() {
   const body = document.querySelector("body");
@@ -37,6 +38,7 @@ export async function app() {
   await openNewSchedule();
   await closeWindowSchedule();
   await loadNewSchedule();
+  await deleteAPI();
 }
 
 // TODO: Usar o método MutationObserver nessa parte do codigo, busca informações no chatGPT

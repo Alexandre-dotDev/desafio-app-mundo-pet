@@ -1,6 +1,8 @@
 @import "./utils/utils.css";
+@import "./utils/popup-times.css";
 @import "./components/load-modules.css";
 @import "./form/load-modules.css";
+@import "./utils/toast.css";
 
 .container {
   max-width: 23.4375rem;

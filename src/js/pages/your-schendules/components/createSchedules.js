@@ -21,7 +21,7 @@ export async function createSchedules(date) {
   const periods = {
     morning: { label: "Manhã", start: 32400000, end: 46799000 }, // 09:00 – 12:59
     afternoon: { label: "Tarde", start: 46800000, end: 64799000 }, // 13:00 – 17:59
-    night: { label: "Noite", start: 64800000, end: 75600000 }, // 18:00 – 20:59
+    night: { label: "Noite", start: 64800000, end: Infinity }, // 18:00 – Infinity
   };
 
   // 5. Estrutura para agrupar os agendamentos por período.

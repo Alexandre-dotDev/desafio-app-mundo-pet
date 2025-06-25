@@ -1,9 +1,13 @@
+import dayjs from "dayjs";
+
 export function clearInputs() {
   const inputTutor = document.querySelector(".tutor #name-tutor");
   const inputPet = document.querySelector(".pet #pet-name");
   const inputPhone = document.querySelector(".phone #phone");
   const textareaServ = document.querySelector(".textarea #description");
-  const inputDate = document.querySelector(".date-time .date #date");
+  const inputDate = document.querySelector(
+    ".date-time .form-date #filter-date"
+  );
   const inputTime = document.querySelector(".date-time .hour #hour");
 
   // Verifica se todos os elementos existem
@@ -23,6 +27,6 @@ export function clearInputs() {
   inputPet.value = "";
   inputPhone.value = "";
   textareaServ.value = "";
-  inputDate.value = "";
-  inputTime.value = "";
+  inputDate.value = dayjs().format("YYYY-MM-DD");
+  inputTime.value = dayjs().format("HH:mm");
 }

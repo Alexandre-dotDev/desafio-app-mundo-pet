@@ -14,7 +14,7 @@
   --content-brand: #9282fa;
   --color-title: #f5f4f5;
   --color-text-btn: #050505;
-
+  --text-toast: #fdf6e3;
   /* Background */
   --bg-primary: #151515;
   --bg-secondary: #1e1e1e;
@@ -46,6 +46,8 @@
   --ff-inter-tight: "Inter Tight", sans-serif;
   /* Inter Tight */
   --title: 600 1.5rem/2rem var(--ff-inter-tight);
+  --title-toast: 600 1rem/2rem var(--ff-inter-tight);
+
   --logo: 600 1rem/1.5rem var(--ff-Grotesk);
   /* Inter */
   --p-md: 400 0.875rem/1.5rem var(--ff-inter);

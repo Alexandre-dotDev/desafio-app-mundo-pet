@@ -98,7 +98,7 @@ form {
     }
 
     & .date-time {
-      & .date {
+      & .form-date {
         position: relative;
 
         & input[type="date"]::-webkit-calendar-picker-indicator {
@@ -139,8 +139,9 @@ form {
       & .hour {
         position: relative;
 
-        & input[type="time"]::-webkit-calendar-picker-indicator {
+        & input #hour::-webkit-calendar-picker-indicator {
           position: absolute;
+          width: 100%;
           right: 0.75rem;
           opacity: 0;
           cursor: pointer;

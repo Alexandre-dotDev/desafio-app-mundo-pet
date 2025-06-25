@@ -22,8 +22,8 @@ export async function loadNewSchedule() {
     }
 
     clearInputs();
+    const currentDate = document.querySelector(".input-wrapper #data").value; // ← pega data atual do input
 
-    const currentDate = document.querySelector("#data")?.value; // ← pega data atual do input
     await updateAppointments(currentDate); // ← passa a data para garantir atualização correta
   });
 }
