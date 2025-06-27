@@ -1,26 +1,37 @@
 import { getAPI } from "../../../api/routes/get-api";
-
-let scheduleHoursArray = []; // Armazena os horários sempre atualizados
+import dayjs from "dayjs";
+import { generateSchedules } from "../../../utils/generate-scheduless";
+import { showToast } from "../../../components/show-toast";
 
 export async function getScheduleHoursArray() {
-  const inputDate = document.querySelector("#data");
+  const inputDate = document.querySelector("#filter-date");
   if (!inputDate) return [];
 
-  // Função para buscar e atualizar os horários no array
-  async function updateHours(date) {
-    const data = await getAPI(date);
-    scheduleHoursArray = data.map((item) => item.time);
+  if (!inputDate.value) {
+    inputDate.value = dayjs().format("YYYY-MM-DD");
   }
 
-  // Carrega os horários da data inicial (input.value)
-  if (inputDate.value) {
-    await updateHours(inputDate.value);
+  const dateString = inputDate.value;
+  const isToday = dayjs(dateString).isSame(dayjs(), "day");
+  const now = dayjs().format("HH:mm");
+
+  const availableSchedules = generateSchedules();
+  const data = await getAPI(dateString);
+  const scheduled = data.map((item) => item.time);
+
+  if (!data.length) {
+    showToast("Agenda disponével para esta data.", "info");
   }
 
-  // Atualiza os horários sempre que a data mudar
-  inputDate.addEventListener("change", async (e) => {
-    await updateHours(e.target.value);
-  });
+  let availableTimes = availableSchedules.filter((h) => !scheduled.includes(h));
 
-  return scheduleHoursArray; // Retorna os horários da data inicial
+  if (isToday) {
+    availableTimes = availableTimes.filter((h) => h >= now);
+  }
+
+  if (availableTimes.length === 0) {
+    showToast("Todos os horários estão ocupados nesta data.", "info");
+  }
+
+  return availableTimes;
 }

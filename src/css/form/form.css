@@ -98,6 +98,9 @@ form {
     }
 
     & .date-time {
+      display: flex;
+      justify-content: space-between;
+
       & .form-date {
         position: relative;
 
@@ -138,7 +141,6 @@ form {
 
       & .hour {
         position: relative;
-
         & input #hour::-webkit-calendar-picker-indicator {
           position: absolute;
           width: 100%;
@@ -190,8 +192,12 @@ form {
         justify-content: space-between;
         gap: 0.9594rem;
 
-        & .date {
+        & .form-date {
           width: 11.9063rem;
+
+          /* & input {
+        width: 182px;
+      } */
         }
 
         & .hour {

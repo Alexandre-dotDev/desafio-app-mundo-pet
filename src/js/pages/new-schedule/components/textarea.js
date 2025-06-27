@@ -1,7 +1,7 @@
 import { showToast } from "../../../components/show-toast";
 
 export function textarea() {
-  const maxCaracter = 200;
+  const maxCaracter = 40;
   const minCaracter = 4;
   const div = document.createElement("div");
   div.classList.add("textarea");

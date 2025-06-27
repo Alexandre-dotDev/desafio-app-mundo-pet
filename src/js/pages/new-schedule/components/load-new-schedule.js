@@ -2,6 +2,7 @@ import { postAPI } from "../../../api/routes/post-api";
 import { collectFormData } from "./collect-form-data";
 import { clearInputs } from "./clear-inputs";
 import { updateAppointments } from "../../your-schendules/components/update-appointments";
+import { showToast } from "../../../components/show-toast";
 
 export async function loadNewSchedule() {
   const buttonToSchedule = document.querySelector("button");
@@ -17,7 +18,7 @@ export async function loadNewSchedule() {
     const result = await postAPI(list);
 
     if (!result.success) {
-      alert("Erro ao cadastrar: " + result.error);
+      showToast(`Erro ao cadastrar: ${result.error}`, "error");
       return;
     }
 

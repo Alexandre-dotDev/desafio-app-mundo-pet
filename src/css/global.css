@@ -7,6 +7,12 @@
 }
 
 :root {
+  /* CYLINDER */
+  --faces: 30; /*Quantidade fixa de faces */
+  --raio: 130px; /* Raio do cilindro */
+  --altura-face: 2rem; /* Altura fixa de cada face */
+  --largura-face: 120px; /*Largura das faces*/
+
   /* COLORS */
   --content-primary: #ffffff;
   --content-secondary: #98959d;
@@ -24,6 +30,8 @@
   --bg-brand: #9282fa;
   --bg-brand-alpha: rgba(146, 130, 250, 0.333);
   --bg-highlights: #bdb4fa;
+  --bg-danger: #a31e14;
+  --bg-danger-hover: #700e07;
 
   /* Border */
   --border-primary: #3e3c41;
@@ -59,10 +67,13 @@
   --link: 400 0.75rem/1rem var(--ff-inter);
 }
 
-html,
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: var(--bg-secondary);
   color: var(--content-primary);
+  perspective: 1200px;
   overflow-x: hidden;
 }
 

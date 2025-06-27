@@ -1,0 +1,84 @@
+#toast-container {
+  position: absolute;
+  top: 16px; /* será atualizado pelo JS */
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s forwards;
+
+  pointer-events: auto;
+  z-index: 9999;
+}
+
+.toast-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 350px;
+  max-width: 90vw;
+  /* padding: 1rem; */
+
+  background-color: var(--bg-secondary);
+  font: var(--title-toast);
+
+  border-radius: 0.5rem;
+  pointer-events: auto;
+}
+
+.toast-confirm > div.message-text {
+  margin-bottom: 0.4rem;
+  text-align: center;
+}
+
+.toast-confirm > div.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.toast-confirm button {
+  padding: 0.4rem 0.5rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font: var(--title-toast);
+  transition: background-color 0.3s ease;
+}
+
+.toast-confirm button.ok-btn {
+  background-color: var(--accent-blue);
+  color: var(--text-toast);
+}
+
+.toast-confirm button.ok-btn:hover {
+  background-color: var(--accent-blue-light);
+}
+
+.toast-confirm button.cancel-btn {
+  background-color: var(--bg-danger);
+  color: var(--text-toast);
+}
+
+.toast-confirm button.cancel-btn:hover {
+  background-color: var(--bg-danger-hover);
+}
+
+/* Entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Saída */
+.toast-confirm.fade-out {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+}

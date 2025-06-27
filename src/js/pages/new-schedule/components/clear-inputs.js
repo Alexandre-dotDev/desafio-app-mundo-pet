@@ -28,5 +28,5 @@ export function clearInputs() {
   inputPhone.value = "";
   textareaServ.value = "";
   inputDate.value = dayjs().format("YYYY-MM-DD");
-  inputTime.value = dayjs().format("HH:mm");
+  inputTime.value = "";
 }

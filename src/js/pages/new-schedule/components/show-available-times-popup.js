@@ -1,66 +1,72 @@
-import dayjs from "dayjs";
-import { availableTimes } from "./available-times";
+import { wrapper } from "../../../components/standard/wrapper";
+import { myCreateElement } from "../../../components/standard/myCreateElement";
+import { createCylinder3D } from "../../../utils/create-cylinder-3d";
+import { getScheduleHoursArray } from "./get-schedule-hours-array";
+import { watchDateValidation } from "../../../utils/watch-date-validation";
 
-const currentHour = dayjs().format("HH:mm");
-const currentDate = dayjs().format("YYYY-MM-DD");
-
-export async function showAvailableTimesPopup() {
-  const times = await availableTimes();
+export async function showAvailableTimesPopup(inputTarget) {
+  const times = await getScheduleHoursArray();
 
   if (!times.length) {
-    alert("Nenhum horário disponível.");
     return;
   }
 
-  // Remove popup antigo, se houver
+  // Remove popup antigo
   const oldPopup = document.querySelector(".popup-times");
   if (oldPopup) oldPopup.remove();
 
-  // Cria o popup
-  const popup = document.createElement("div");
-  popup.classList.add("popup-times");
-
-  // Adiciona os horários como botões
-  times.forEach((time) => {
-    const button = document.createElement("button");
-    button.classList.add("popup-btn");
-    button.textContent = time;
-
-    button.addEventListener("click", () => {
-      const inputTime = document.querySelector("#hour");
-      const inputDate = document.querySelector("#filter-date").value;
-
-      if (time < currentHour && currentDate === inputDate) {
-        const limit = currentHour > "21:01" ? "21hs" : currentHour;
-        alert(
-          `A hora não pode ser menor que ${limit}.\nHorário de agendamentos das 9hs às 21hs`
-        );
-        inputTime.value = "";
-        popup.remove();
-
-        return;
-      }
-
-      if (inputTime) inputTime.value = time;
-      popup.remove();
-      document.removeEventListener("click", closePopup);
-    });
-
-    popup.appendChild(button);
+  // Cria o popup (.scene com .cylinder dentro)
+  const popup = wrapper({
+    classes: ["popup-overlay"],
+    attributes: { id: "cylinder-id" },
+    children: [
+      myCreateElement({
+        tag: "div",
+        classes: ["scene"],
+        children: [
+          myCreateElement({
+            tag: "div",
+            classes: ["cylinder"],
+            attributes: { id: "cylinder" },
+          }),
+        ],
+      }),
+    ],
   });
 
-  // Adiciona ao body
+  // Adiciona ao DOM e trava scroll do body
   document.body.appendChild(popup);
+  document.body.classList.add("no-scroll");
 
-  // Fechar ao clicar fora
+  watchDateValidation("#filter-date", (isValid) => {
+    if (!isValid) {
+      popup.remove();
+      return;
+    } else {
+      // Cria o cilindro 3D
+      createCylinder3D({
+        containerElement: popup,
+        data: times,
+
+        onSelect: (value) => {
+          inputTarget.value = value;
+          popup.remove();
+          document.body.classList.remove("no-scroll");
+        },
+      });
+    }
+  });
+
+  // Fecha ao clicar fora
   function closePopup(e) {
-    if (!popup.contains(e.target)) {
+    if (popup.contains(e.target)) {
       popup.remove();
       document.removeEventListener("click", closePopup);
+      document.body.classList.remove("no-scroll");
     }
   }
 
   setTimeout(() => {
     document.addEventListener("click", closePopup);
-  }, 10); // Pequeno delay evita remover imediatamente
+  }, 10);
 }

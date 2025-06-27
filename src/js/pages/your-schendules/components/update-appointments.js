@@ -1,4 +1,3 @@
-import { availableTimes } from "../../new-schedule/components/available-times";
 import { createSchedules } from "./createSchedules";
 
 export async function updateAppointments(dateFilter = "") {

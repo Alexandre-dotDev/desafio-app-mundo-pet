@@ -1,0 +1,91 @@
+/* Camada escura atrás de tudo */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  transition: background 0.3s;
+  z-index: 3;
+}
+
+/* Contêiner da cena 3D */
+.scene {
+  width: var(--largura-face); /* largura da face */
+  height: calc(var(--raio) * 2); /* altura = diâmetro */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  transform-style: preserve-3d;
+
+  transform-origin: center center;
+  perspective: 300px;
+  z-index: 10;
+}
+
+/* Cilindro 3D giratório */
+.cylinder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+
+  backface-visibility: hidden;
+}
+
+/* Face invisível – apenas suporte de posicionamento */
+.face {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translateY(-50%);
+  width: var(--largura-face);
+  height: var(--altura-face);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backface-visibility: hidden;
+  z-index: 11;
+}
+
+/* Botão flutuante sobre a face invisível */
+.face button {
+  display: inline-block;
+  min-width: 3rem;
+  white-space: nowrap;
+  text-align: center;
+  max-height: 30px;
+  padding: 0.1rem 0.5rem;
+  font: var(--link);
+  background: var(--bg-brand);
+  color: var(--color-title);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0.625rem;
+
+  pointer-events: auto;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  pointer-events: auto;
+  transition: background 0.3s;
+  isolation: isolate;
+}
+
+/* Classe ativada via JS que simula o efeito de hover */
+.face button.hover-simulado {
+  background: var(--accent-blue);
+  color: var(--content-primary);
+}
+
+@media (min-width: 80rem) {
+  .scene {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+}

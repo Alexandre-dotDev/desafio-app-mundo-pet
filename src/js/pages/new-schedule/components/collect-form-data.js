@@ -1,4 +1,5 @@
 import { v4 as uuid4 } from "uuid";
+import { showToast } from "../../../components/show-toast";
 
 export function collectFormData() {
   const inputTutor = document.querySelector(".tutor #name-tutor");
@@ -26,12 +27,12 @@ export function collectFormData() {
   const name_user = capitalizeName(inputTutor.value.trim());
   const name_pet = capitalizeName(inputPet.value.trim());
   const phone = inputPhone.value.trim();
-  const serv = textareaServ.value.trim();
+  const serv = capitalizeName(textareaServ.value.trim());
   const date = inputDate.value.trim();
   const time = inputTime.value.trim();
 
   if (!name_user || !name_pet || !phone || !serv || !date || !time) {
-    alert("Preencha todos os campos.");
+    showToast("Preencha todos os campos.", "info");
     return null;
   }
 
@@ -62,6 +63,11 @@ function capitalizeName(text) {
     "a",
     "o",
     "di",
+    "para",
+    "você",
+    "não",
+    "nenhum",
+    "nenhuma",
   ];
 
   return text
